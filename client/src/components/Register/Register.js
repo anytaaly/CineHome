@@ -1,9 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 import "./Register.css";
 import logo from "../../logo.svg";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import classnames from "classnames";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
 
 class Register extends React.Component {
   constructor() {
@@ -19,6 +22,12 @@ class Register extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.error) {
+      this.setState({ errors: nextProps.errors });
+    }
+  }
+
   onSubmit(e) {
     e.preventDefault();
     const newUser = {
@@ -29,11 +38,7 @@ class Register extends React.Component {
     };
     //we dont need to use .post(localhost:5000/api/users/register)
     //because we have set proxy in the package.json
-
-    axios
-      .post("/api/users/register", newUser)
-      .then(res => console.log(res.data))
-      .catch(err => this.setState({ errors: err.response.data }));
+    this.props.registerUser(newUser, this.props.history);
   }
 
   onChange(e) {
@@ -45,7 +50,6 @@ class Register extends React.Component {
   render() {
     const { errors } = this.state;
     //same as doing this = const = this.state of errors; destructuring of the errors
-
     return (
       <div className="landing">
         <div className="darkOverlay landing-inner text-light">
@@ -148,4 +152,15 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { registerUser })(withRouter(Register));

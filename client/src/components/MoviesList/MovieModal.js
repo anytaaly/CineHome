@@ -8,8 +8,6 @@ import { API_KEY } from "./MoviesList";
 import { Link } from "react-router-dom";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
-const REVIEW_URL = "http://api.themoviedb.org/3/movie/";
-// 83542/reviews?api_key=24546d384e0d7b7c8db5d8333ef06713'
 
 class MovieModal extends Component {
   state = {

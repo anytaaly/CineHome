@@ -7,8 +7,6 @@ import Overdrive from "react-overdrive";
 import loading from "./loading.svg";
 import { API_KEY } from "./MoviesList";
 import "./MovieDetails.css";
-// import { Link } from "react-router-dom";
-import MovieVideo from "./MovieVideo";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w200";
 const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";

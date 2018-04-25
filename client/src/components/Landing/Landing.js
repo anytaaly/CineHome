@@ -12,7 +12,7 @@ class Landing extends React.Component {
             <div className="row">
               <div className="col-md-12 text-center">
                 <div>
-                  <img src={logo} id="icon-rotate" />
+                  <img src={logo} id="icon-rotate" alt="logo" />
                 </div>
                 <h1 className="display-3 mb-4">T-VIEW</h1>
                 <p className="lead"> Stream TV and Movies Live Online</p>
