@@ -1,0 +1,9 @@
+export const API_KEY = "24546d384e0d7b7c8db5d8333ef06713";
+export const API_KEY_ALT = "&api_key=24546d384e0d7b7c8db5d8333ef06713";
+export const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
+export const URL_DETAIL = "https://api.themoviedb.org/3/movie/";
+export const URL_SEARCH = "https://api.themoviedb.org/3/search/movie?query=";
+export const URL_IMAGE = "https://image.tmdb.org/t/p/w500/";
+export const URL_BACKGROUND = "https://image.tmdb.org/t/p/original";
+export const IMG_SIZE_XSMALL = "https://image.tmdb.org/t/p/w45/";
+export const VIDEO_LINK = "https://api.themoviedb.org/3/movie/";

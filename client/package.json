@@ -1,0 +1,31 @@
+{
+  "name": "finalproject",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.5",
+    "react": "^16.3.1",
+    "react-autosuggest": "^9.3.4",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.1",
+    "react-modal-video": "^1.1.2",
+    "react-overdrive": "^0.0.9",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-video-players": "^0.1.11",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.3.1",
+    "styled-components": "^3.2.5",
+    "video-react": "^0.10.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000"
+}
