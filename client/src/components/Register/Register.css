@@ -3,8 +3,8 @@
   background: url("../images/background.jpg");
   background-repeat: repeat-y;
   background-size: cover;
-  background-position: center;
-  margin-bottom: -50px;
+  /* background-position: center; */
+  margin: 0 0 0 0;
 }
 
 .landing-inner {

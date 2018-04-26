@@ -102,7 +102,6 @@ class MovieList extends Component {
             )}
           />
         )}
-        <Footer />
       </div>
     );
   }
