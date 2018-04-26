@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import "./Register.css";
-import logo from "../../logo.svg";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import TextFieldGroup from "../common/TextFieldGroup";
+
+import "./Register.css";
+import logo from "../../logo.svg";
+
+// import { Link } from "react-router-dom";
 
 class Register extends React.Component {
   constructor() {
@@ -62,9 +64,14 @@ class Register extends React.Component {
             <div className="row">
               <div className="col-md-12 text-center box2">
                 <div>
-                  <img src={logo} id="icon-rotate" />
+                  <img src={logo} id="icon-rotate" alt="logo" />
                 </div>
-                <h1 className="display-3 mb-4">Create your CineHome account</h1>
+                <h1
+                  className="display-3 mb-4"
+                  style={{ color: "white", fontFamily: "Work Sans" }}
+                >
+                  Create your CineHome account
+                </h1>
                 <p className="lead"> Stream TV and Movies Live Online</p>
                 <hr />
                 <form noValidate onSubmit={this.onSubmit}>

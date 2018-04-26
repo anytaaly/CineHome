@@ -19,34 +19,33 @@ class Navbar extends React.Component {
 
     //GuestLink OffLinks an GuestLink
     const authLinks = (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
+      <ul className="navbar-nav">
+        <li>
+          <Link to="/">Home</Link>
         </li>
 
-        <li className="nav-item">
+        <li>
           <Link to="/upcoming"> Upcoming Movies </Link>
+        </li>
+
+        <li>
+          <Link to="/topmovies"> Top Movies</Link>
         </li>
 
         {/* <form className="navbar-form navbar-left">
           <input className="form-control" placeholder="Search" />
           <button className="btn navbar-btn button">Search</button>
         </form> */}
-        <li className="nav-item">
-          <a
-            href=""
-            onClick={this.onLogoutClick.bind(this)}
-            className="nav-link"
-          >
-            <img
-              className="rounded-circle"
-              src={user.avatar}
-              alt={user.name}
-              style={{ width: "50px", marginRight: "5px" }}
-              title="You must have a Gravatar connected to your email to display an image"
-            />
+
+        <img
+          className="rounded-circle"
+          src={user.avatar}
+          alt={user.name}
+          style={{ width: "50px", marginRight: "5px" }}
+          title="You must have a Gravatar connected to your email to display an image"
+        />
+        <li style={{ float: "right" }}>
+          <a href="" onClick={this.onLogoutClick.bind(this)}>
             <span className="glyphicon glyphicon-log-out" /> Logout{" "}
           </a>
         </li>
@@ -56,12 +55,12 @@ class Navbar extends React.Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li>
-          <Link to="/">
+          <Link to="/register" style={{ float: "right" }}>
             <span className="glyphicon glyphicon-user" /> Sign Up
           </Link>
         </li>
         <li>
-          <Link to="/login">
+          <Link to="/login" style={{ float: "right" }}>
             <span className="glyphicon glyphicon-log-in" /> Login
           </Link>
         </li>
@@ -71,17 +70,17 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar-inverse ">
         <div className="container-fluid">
-          <div className="navbar-header">
+          <div>
             <Link to="/landing">
               <img
                 src={logo}
                 className="navbar-brand icon-rotate"
-                style={{ height: "70px" }}
+                style={{ height: "75px" }}
+                alt="logo"
               />
             </Link>
           </div>
-
-          {isAuthenticated ? authLinks : guestLinks}
+          <div className="nav">{isAuthenticated ? authLinks : guestLinks}</div>
         </div>
       </nav>
     );

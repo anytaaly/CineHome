@@ -62,8 +62,8 @@ class Login extends React.Component {
                 <div>
                   <img src={logo} id="icon-rotate" alt="logo" />
                 </div>
-                <h1 className="display-3 mb-4">LOG IN </h1>
-                <p className="lead"> To Stream TV and Movies Live Online</p>
+                <h1 className="display-3 mb-4 headingOne">LOG IN </h1>
+                <p className="paraOne"> To Stream TV and Movies Live Online</p>
                 <hr />
                 <form onSubmit={this.onSubmit}>
                   <TextFieldGroup

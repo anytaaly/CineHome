@@ -10,10 +10,10 @@ import "./MovieDetails.css";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w200";
 const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
-const REVIEW_URL = "http://api.themoviedb.org/3/movie/";
+// const REVIEW_URL = "http://api.themoviedb.org/3/movie/";
 const CAST_URL = "https://image.tmdb.org/t/p/w154";
-const MOVIE_PATH = "../Movies/";
-const TRAILER_PATH = "https://www.youtube.com/embed/";
+// const MOVIE_PATH = "../Movies/";
+// const TRAILER_PATH = "https://www.youtube.com/embed/";
 // 83542/reviews?api_key=24546d384e0d7b7c8db5d8333ef06713'
 
 class MovieDetail extends Component {
@@ -68,7 +68,7 @@ class MovieDetail extends Component {
               </Overdrive>
             )}
             <div>
-              <h1>{movie.title}</h1>
+              <h1 style={{ color: "white" }}>{movie.title}</h1>
               <p style={{ fontSize: "15px" }}>
                 {" "}
                 {movie.vote_average}{" "}
@@ -79,7 +79,7 @@ class MovieDetail extends Component {
               {/* <MovieVideo /> */}
               <button
                 style={{
-                  backgroundColor: "#368bef",
+                  backgroundColor: "#e82266",
                   color: "white",
                   border: "1px solid white",
                   textDecoration: "none",

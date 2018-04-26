@@ -4,7 +4,6 @@ import MovieModal from "./MovieModal";
 import MovieItem from "./MovieItem";
 import Pagination from "./Pagination";
 import VideoBackDrop from "./VideoBackDrop";
-import Footer from "../Footer/Footer";
 
 export const API_KEY = "24546d384e0d7b7c8db5d8333ef06713";
 
@@ -102,7 +101,6 @@ class MoviesList extends Component {
             )}
           />
         )}
-        <Footer />
       </div>
     );
   }

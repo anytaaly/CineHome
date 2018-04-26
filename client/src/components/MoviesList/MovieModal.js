@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Poster } from "./Movie";
 import Overdrive from "react-overdrive";
-import loading from "./loading.svg";
-import { LoadingWrapper } from "./MovieDetail";
 import { API_KEY } from "./MoviesList";
 import { Link } from "react-router-dom";
+
+// import loading from "./loading.svg";
+// import { LoadingWrapper } from "./MovieDetail";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
 
@@ -53,33 +54,19 @@ class MovieModal extends Component {
             />
           </Overdrive>
         )}
-        <div>
-          <h1>{movie.title}: </h1>
+        <div style={{ overflow: "hidden" }}>
+          <h1 style={{ color: "black" }}>{movie.title}: </h1>
           <p style={{ fontSize: "15px" }}>
             {" "}
             {
               movie.vote_average
             } <i className="yellow lg star outline icon" />{" "}
           </p>
-          <Link
-            to={`/${movie.id}`}
-            style={{
-              backgroundColor: "#368bef",
-              color: "white",
-              border: "1px solid white",
-              textDecoration: "none",
-              fontSize: 12,
-              paddingTop: 10,
-              paddingBottom: 10,
-              paddingLeft: 22,
-              paddingRight: 22,
-              marignLeft: 10
-            }}
-          >
-            VISIT MOVIE PAGE
+          <Link to={`/${movie.id}`}>
+            <button className="btn button">VISIT MOVIE PAGE</button>
           </Link>
-          <h3>{movie.release_date}</h3>
-          <p>{movie.overview}</p>
+          <h3 style={{ color: "black" }}>{movie.release_date}</h3>
+          <p style={{ color: "black" }}>{movie.overview}</p>
         </div>
       </MovieModalInfo>
     );

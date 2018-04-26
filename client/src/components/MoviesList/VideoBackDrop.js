@@ -120,29 +120,12 @@ class VideoBackDrop extends Component {
               >
                 {movies[this.state.selected].overview}
               </p>
-              <Link
-                to={`/${movies[this.state.selected].id}`}
-                style={{
-                  backgroundColor: "#368bef",
-                  color: "white",
-                  border: "1px solid white",
-                  textDecoration: "none",
-                  fontSize: 12,
-                  paddingTop: 10,
-                  paddingBottom: 10,
-                  paddingLeft: 22,
-                  paddingRight: 22,
-                  marignLeft: 10
-                }}
-              >
-                VISIT MOVIE PAGE
+              <Link to={`/${movies[this.state.selected].id}`}>
+                <button className="btn mt-4 button"> VISIT MOVIE PAGE </button>
               </Link>
               <span> </span>
-              <Link
-                to={`/${movies[this.state.selected].id}`}
-                className="button"
-              >
-                READ REVIEW
+              <Link to={`/${movies[this.state.selected].id}`}>
+                <button className="btn mt-4 button"> READ REVIEW </button>
               </Link>
             </div>
             <iframe

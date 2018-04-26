@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w200";
 const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
-const REVIEW_URL = "http://api.themoviedb.org/3/movie/";
+// const REVIEW_URL = "http://api.themoviedb.org/3/movie/";
 const CAST_URL = "https://image.tmdb.org/t/p/w154";
 // 83542/reviews?api_key=24546d384e0d7b7c8db5d8333ef06713'
 
@@ -64,7 +64,7 @@ class MovieDetail extends Component {
               </Overdrive>
             )}
             <div>
-              <h1>{movie.title}</h1>
+              <h1 style={{ color: "white" }}>{movie.title}</h1>
               <p style={{ fontSize: "15px" }}>
                 {" "}
                 {movie.vote_average}{" "}
@@ -73,22 +73,8 @@ class MovieDetail extends Component {
               <h3>{movie.release_date}</h3>
               <p>{movie.overview}</p>
 
-              <Link
-                to={`/${movie.id}`}
-                style={{
-                  backgroundColor: "#368bef",
-                  color: "white",
-                  border: "1px solid white",
-                  textDecoration: "none",
-                  fontSize: 12,
-                  paddingTop: 10,
-                  paddingBottom: 10,
-                  paddingLeft: 22,
-                  paddingRight: 22,
-                  marign: "10px"
-                }}
-              >
-                Play Movie{" "}
+              <Link to={`/${movie.id}`}>
+                <button className="btn mt-4 button"> Play Movie </button>
               </Link>
             </div>
           </MovieInfo>

@@ -1,8 +1,18 @@
 .zoom {
-    
-    transition: transform .5s; /* Animation */
+  transition: transform 0.5s; /* Animation */
 }
 
 .zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.button {
+  background: linear-gradient(
+    to right,
+    rgba(220, 48, 106, 1),
+    rgba(248, 152, 6, 1)
+  );
+  color: white;
 }

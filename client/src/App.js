@@ -16,6 +16,7 @@ import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/create-profile/CreateProfile";
+import EditProfile from "./components/edit-profile/EditProfile";
 
 import MoviesList from "./components/MoviesList/MoviesList";
 import MovieDetail from "./components/MoviesList/MovieDetail";
@@ -51,12 +52,13 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
+          <div className="App">
             <Navbar />
             <Route exact path="/" component={Landing} />
             <div>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
@@ -68,12 +70,28 @@ class App extends Component {
                 />
               </Switch>
               <Switch>
-                <PrivateRoute
-                  exact
-                  path="/upcoming"
-                  component={props => <MovieList {...props} />}
-                />
+                <PrivateRoute path="/edit-profile" component={EditProfile} />
               </Switch>
+              <div>
+                <Switch>
+                  <PrivateRoute
+                    exact
+                    path="/upcoming"
+                    component={props => <MovieList {...props} />}
+                  />
+                  <PrivateRoute
+                    exact
+                    path="/topmovies"
+                    component={props => <MoviesList {...props} />}
+                  />
+
+                  <PrivateRoute
+                    exact
+                    path="/:id"
+                    component={props => <MovieDetail {...props} />}
+                  />
+                </Switch>
+              </div>
             </div>
             <Footer />
           </div>
